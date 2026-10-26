@@ -1,69 +1,158 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#b8d8eb">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+
 <title>5♡0</title>
+
 <style>
-  :root {
-    --ink: #292832;
-    --cream: #fff9e9;
-    --pink: #efacd0;
-    --sage: #c9d98c;
-    --lilac: #d8c9df;
-    --shadow: 0 10px 25px rgba(34, 42, 42, .18);
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0; min-height: 100vh; color: var(--ink);
-    font-family: "Montserrat", sans-serif;
-    background:
-      linear-gradient(180deg, rgba(194,225,243,.22), rgba(18,53,29,.12) 54%, rgba(18,53,29,.34)),
-      url("https://i.pinimg.com/1200x/a2/e7/74/a2e7741e11cb810cfa946223acbc3856.jpg") center/cover fixed,
-      #b8d8eb;
-  }
-  button { font: inherit; }
-  .page { width: min(1100px, 100%); margin: 0 auto; padding: 26px 18px 50px; }
-  .browser {
-    width: min(760px, 96%); margin: 10px auto 44px; padding: 13px 17px;
-    display: flex; align-items: center; gap: 13px;
-    border: 2px solid rgba(255,255,255,.35); border-radius: 22px;
-    background: rgba(75, 91, 102, .43); backdrop-filter: blur(13px);
-    color: white; box-shadow: 0 7px 22px #273e4b2b;
-  }
-  .browser .circle { font-size: 17px; opacity: .9; }
-  .browser .address {
-    flex: 1; min-width: 0; padding: 8px 14px; border-radius: 14px;
-    background: rgba(255,255,255,.15); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-    font-size: clamp(13px, 2.1vw, 16px);
-  }
-  .hero {
-    text-align: center; padding: 25px 15px 32px; margin-bottom: 16px;
-    border-radius: 28px; background: rgba(37, 50, 44, .22);
-    backdrop-filter: blur(7px); color: white;
-  }
-  .eyebrow { text-transform: uppercase; letter-spacing: .18em; font-size: 11px; font-weight: 800; }
-  h1 { margin: 10px 0 8px; font-size: clamp(34px, 7vw, 66px); line-height: 1.03; text-shadow: 0 3px 15px #243d354f; }
-  .hero p { max-width: 620px; margin: 0 auto 20px; font-size: clamp(14px, 2.3vw, 16px); line-height: 1.3; font-weight: 200;}
-  .pill {
-    border: 0; border-radius: 999px; padding: 12px 20px; background: var(--cream);
-    color: var(--ink); font-weight: 600; cursor: pointer; box-shadow: 0 5px 0 rgba(0,0,0,.13);
-    transition: transform .2s, box-shadow .2s;
-  }
-  .pill:hover { transform: translateY(-2px); box-shadow: 0 7px 0 rgba(0,0,0,.12); }
-  .surprises[hidden] {
-  display: none !important; }
+:root {
+  --ink: #292832;
+  --cream: #fff9e9;
+  --pink: #efacd0;
+  --sage: #c9d98c;
+  --lilac: #d8c9df;
+  --shadow: 0 10px 25px rgba(34, 42, 42, .18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: "Montserrat", sans-serif;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(194,225,243,.22),
+      rgba(18,53,29,.12) 54%,
+      rgba(18,53,29,.34)
+    ),
+    url("https://i.pinimg.com/1200x/a2/e7/74/a2e7741e11cb810cfa946223acbc3856.jpg") center/cover fixed,
+    #b8d8eb;
+}
+
+button {
+  font: inherit;
+}
+
+.page {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 26px 18px 50px;
+}
+
+/* BARRA DEL NAVEGADOR */
+
+.browser {
+  width: min(760px, 96%);
+  margin: 10px auto 44px;
+  padding: 13px 17px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  border: 2px solid rgba(255,255,255,.35);
+  border-radius: 22px;
+  background: rgba(75,91,102,.43);
+  backdrop-filter: blur(13px);
+  color: white;
+  box-shadow: 0 7px 22px #273e4b2b;
+}
+
+.browser .circle {
+  font-size: 17px;
+  opacity: .9;
+  flex-shrink: 0;
+}
+
+.browser .address {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.15);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: clamp(13px, 2.1vw, 16px);
+}
+
+/* ENCABEZADO */
+
+.hero {
+  text-align: center;
+  padding: 25px 15px 32px;
+  margin-bottom: 16px;
+  border-radius: 28px;
+  background: rgba(37,50,44,.22);
+  backdrop-filter: blur(7px);
+  color: white;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+h1 {
+  margin: 10px 0 8px;
+  font-size: clamp(34px, 7vw, 66px);
+  line-height: 1.03;
+  text-shadow: 0 3px 15px #243d354f;
+}
+
+.hero p {
+  max-width: 620px;
+  margin: 0 auto 20px;
+  font-size: clamp(14px, 2.3vw, 16px);
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.pill {
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 20px;
+  background: var(--cream);
+  color: var(--ink);
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 0 rgba(0,0,0,.13);
+  transition: transform .2s, box-shadow .2s;
+}
+
+.pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0 rgba(0,0,0,.12);
+}
+
+/* APARICIÓN DE LAS SORPRESAS */
+
+.surprises[hidden] {
+  display: none !important;
+}
 
 .surprises {
   opacity: 0;
   transform: translateY(8px);
-  transition: opacity 0.65s ease, transform 0.65s ease;
+  transition: opacity .65s ease, transform .65s ease;
 }
 
 .surprises.visible {
@@ -71,49 +160,104 @@
   transform: translateY(0);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .surprises {
-    transition: none;
-  }
+/* CUADRÍCULA: SIEMPRE DOS COLUMNAS */
+
+.grid {
+  width: 100%;
+  min-width: 0;
+  padding: clamp(12px, 2.5vw, 28px);
+  border-radius: 30px;
+  background: rgba(37,48,43,.35);
+  backdrop-filter: blur(9px);
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(12px, 2.5vw, 25px);
 }
-  .grid {
-    padding: 22px; border-radius: 30px; background: rgba(37, 48, 43, .35);
-    backdrop-filter: blur(9px); display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 22px;
-  }
-  .tile {
-    min-height: 220px; border: 0; border-radius: 28px; padding: 20px;
-    text-align: left; position: relative; overflow: hidden; cursor: pointer;
-    color: var(--ink); box-shadow: var(--shadow); isolation: isolate;
-    display: flex; flex-direction: column; justify-content: space-between;
-    transition: transform .2s ease, filter .2s ease; touch-action: manipulation;
-  }
-  .tile:hover {
-    transform: translateY(-4px) rotate(-.3deg);
-    filter: saturate(1.06) brightness(1.02);
-    box-shadow: 0 14px 30px rgba(34, 42, 42, .24);
-  }
-  .tile:focus-visible, button:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
-  .tile::after { content: ""; position: absolute; inset: auto -25px -20px auto; width: 130px; height: 100px; background: rgba(255,255,255,.18); border-radius: 100%; z-index: -1; }
-  .tile.envelope {
-    background: linear-gradient(145deg, #f0e7c9 0%, #d9cfac 58%, #b8aa83 100%);
-  }
-  .tile.messages {
-    background: linear-gradient(145deg, #ffd0e6 0%, #e9a8c9 58%, #c77ca4 100%);
-  }
-  .tile.flower {
-    background: linear-gradient(145deg, #e5efb6 0%, #c8d98b 58%, #9eaf61 100%);
-  }
-  .tile.typewriter {
-    background: linear-gradient(-145deg, #eee2f0 0%, #d6c8d9 58%, #ad98b3 100%);
-  }
-  .tile.memories {
-    background: linear-gradient(145deg, #d9f0fb 0%, #b9d8e7 58%, #83b0c4 100%);
-  }
-  .tile.final {
-    background: linear-gradient(145deg, #ffedc9 0%, #f2d7a7 58%, #d2ae70 100%);
-  }
-  
+
+/* TARJETAS */
+
+.tile {
+  width: 100%;
+  min-width: 0;
+  min-height: clamp(220px, 25vw, 290px);
+  border: 0;
+  border-radius: clamp(18px, 2.5vw, 28px);
+  padding: clamp(12px, 2.5vw, 26px);
+
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  color: var(--ink);
+  box-shadow: var(--shadow);
+  isolation: isolate;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: transform .2s ease, filter .2s ease;
+  touch-action: manipulation;
+}
+
+.tile:hover {
+  transform: translateY(-4px) rotate(-.3deg);
+  filter: saturate(1.06) brightness(1.02);
+  box-shadow: 0 14px 30px rgba(34,42,42,.24);
+}
+
+.tile:focus-visible,
+button:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+}
+
+.tile::after {
+  content: "";
+  position: absolute;
+  inset: auto -25px -20px auto;
+  width: 130px;
+  height: 100px;
+  background: rgba(255,255,255,.18);
+  border-radius: 100%;
+  z-index: -1;
+}
+
+/* COLORES */
+
+.tile.envelope {
+  background: linear-gradient(145deg, #f0e7c9 0%, #d9cfac 58%, #b8aa83 100%);
+}
+
+.tile.messages {
+  background: linear-gradient(145deg, #ffd0e6 0%, #e9a8c9 58%, #c77ca4 100%);
+}
+
+.tile.flower {
+  background: linear-gradient(145deg, #e5efb6 0%, #c8d98b 58%, #9eaf61 100%);
+}
+
+.tile.typewriter {
+  background: linear-gradient(-145deg, #eee2f0 0%, #d6c8d9 58%, #ad98b3 100%);
+}
+
+.tile.memories {
+  background: linear-gradient(145deg, #d9f0fb 0%, #b9d8e7 58%, #83b0c4 100%);
+}
+
+.tile.final {
+  background: linear-gradient(145deg, #ffedc9 0%, #f2d7a7 58%, #d2ae70 100%);
+}
+
+/* IMÁGENES DE LAS TARJETAS */
+
 .tile-icon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+  min-height: clamp(100px, 14vw, 145px);
   font-size: clamp(43px, 8vw, 76px);
   line-height: 1;
   filter: drop-shadow(0 6px 3px #00000018);
@@ -121,118 +265,673 @@
 
 .tile-icon img {
   display: block;
-  width: 3em;
-  height: 3em;
+  width: clamp(85px, 12vw, 145px);
+  height: clamp(85px, 12vw, 145px);
+  max-width: 100%;
   object-fit: contain;
-  margin: -20px 0 0 10px;
+  object-position: center;
+  margin: 0;
   transform: rotate(8deg);
 }
 
-.sub{
-  font-size: 1.2rem;
+#msg img {
+  transform: rotate(0deg);
 }
 
-#msg img {
-  transform: rotate(0deg);}
-  .tile-title { font-size: clamp(17px, 2.8vw, 25px); font-weight: 800; line-height: 1.2; margin-top: 35px; }
-  .tile-title em { display: block; font-weight: 400; font-style: italic; margin-bottom: 3px; }
-  .number { position: absolute; right: 14px; bottom: 12px; width: 46px; height: 46px; display: grid; place-items: center; background: var(--cream); border-radius: 50%; font-size: 22px; font-weight: 800; box-shadow: 0 3px 9px #00000015; }
-  .bookmark { position: absolute; right: 18px; top: 16px; font-size: 20px; opacity: .75; }
-  .hint { margin: 27px 0 20px; text-align: center; color: white; font-size: 13px; text-shadow: 0 1px 5px #23352e; }
-  .footer { color: white; text-align: center; padding: 30px 10px 0; text-shadow: 0 1px 5px #23352e; font-size: 13px; }
-  .modal {
-    position: fixed; inset: 0; z-index: 10; display: none; align-items: center; justify-content: center;
-    padding: 18px; background: rgba(25, 35, 37, .55); backdrop-filter: blur(7px);
-  }
-  .modal.open { display: flex; }
-  .modal-card {
-    width: min(560px, 100%); max-height: 86vh; overflow: auto; position: relative;
-    border-radius: 26px; padding: 30px; background: #fff9ed; box-shadow: 0 20px 70px #0004;
-    animation: rise .28s ease both;
-  }
-  @keyframes rise { from { opacity: 0; transform: translateY(18px) scale(.98); } to { opacity: 1; transform: none; } }
-  .close { position: absolute; top: 12px; right: 12px; border: 0; background: #e6dced00; width: 42px; height: 38px; border-radius: 50%; cursor: pointer; font-size: 25px; }
-  .modal-icon { font-size: 50px; margin-bottom: 4px; }
-  .modal h2 { margin: 4px 42px 14px 0; font-size: 1.5rem; }
-  .modal p { font-size: 0.9rem; line-height: 1.75; white-space: pre-line; }
-  .letter-paper { margin-top: 15px; padding: 21px; border: 1px solid #e5d7b9; border-radius: 10px; text-align: justify; background: repeating-linear-gradient(#fffdf5 0 31px, #eadfcb 32px); }
-  .message-stack { display: grid; gap: 10px; }
-  .bubble { border: 0; border-radius: 18px 18px 18px 5px; background: #f0c4db; padding: 13px 16px; text-align: left; cursor: pointer; box-shadow: 0 3px 7px #0000000d; }
-  .bubble:nth-child(even) { background: #dfd6ea; margin-left: 20px; border-radius: 18px 18px 5px 18px; }
-  .bubble span { display: none; margin-top: 8px; font-size: 0.8rem; font-weight: 400; text-align: justify; line-height: 1.3; }
-  .bubble.revealed span { display: block; }
-  .flower-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
-  .flower-card { padding: 14px 8px; border-radius: 16px; background: #e5ebc7; text-align: center; line-height: 1.2; font-size: 1rem;}
-  .flower-card img {
+/* TÍTULOS */
+
+.tile-title {
+  min-width: 0;
+  margin-top: 14px;
+  padding-right: 10px;
+  overflow-wrap: anywhere;
+  font-size: clamp(15px, 2.2vw, 24px);
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.tile-title em {
   display: block;
-  width: clamp(55px, 12vw, 90px);
-  height: clamp(55px, 12vw, 90px);
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.sub {
+  font-size: clamp(12px, 1.7vw, 19px);
+}
+
+/* NÚMEROS Y ADORNOS */
+
+.number {
+  position: absolute;
+  right: 14px;
+  bottom: 12px;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  background: var(--cream);
+  border-radius: 50%;
+  font-size: 22px;
+  font-weight: 800;
+  box-shadow: 0 3px 9px #00000015;
+}
+
+.bookmark {
+  position: absolute;
+  right: 18px;
+  top: 16px;
+  font-size: 20px;
+  opacity: .75;
+}
+
+.hint {
+  margin: 27px 0 20px;
+  text-align: center;
+  color: white;
+  font-size: 13px;
+  text-shadow: 0 1px 5px #23352e;
+}
+
+.footer {
+  color: white;
+  text-align: center;
+  padding: 30px 10px 0;
+  text-shadow: 0 1px 5px #23352e;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* VENTANAS EMERGENTES */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  background: rgba(25,35,37,.55);
+  backdrop-filter: blur(7px);
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal-card {
+  width: min(560px, 100%);
+  max-height: 86vh;
+  max-height: 86dvh;
+  overflow: auto;
+  position: relative;
+  border-radius: 26px;
+  padding: 30px;
+  background: #fff9ed;
+  box-shadow: 0 20px 70px #0004;
+  animation: rise .28s ease both;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: 0;
+  background: #e6dced00;
+  width: 42px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.modal-icon {
+  font-size: 50px;
+  margin-bottom: 4px;
+}
+
+.modal h2 {
+  margin: 4px 42px 14px 0;
+  font-size: 1.5rem;
+  overflow-wrap: anywhere;
+}
+
+.modal p {
+  font-size: .9rem;
+  line-height: 1.75;
+  white-space: pre-line;
+}
+
+/* CARTA */
+
+.letter-paper {
+  margin-top: 15px;
+  padding: 21px;
+  border: 1px solid #e5d7b9;
+  border-radius: 10px;
+  text-align: justify;
+  background: repeating-linear-gradient(
+    #fffdf5 0 31px,
+    #eadfcb 32px
+  );
+}
+
+/* MENSAJES */
+
+.message-stack {
+  display: grid;
+  gap: 10px;
+}
+
+.bubble {
+  border: 0;
+  border-radius: 18px 18px 18px 5px;
+  background: #f0c4db;
+  padding: 13px 16px;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 3px 7px #0000000d;
+}
+
+.bubble:nth-child(even) {
+  background: #dfd6ea;
+  margin-left: 20px;
+  border-radius: 18px 18px 5px 18px;
+}
+
+.bubble span {
+  display: none;
+  margin-top: 8px;
+  font-size: .8rem;
+  font-weight: 400;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.bubble.revealed span {
+  display: block;
+}
+
+/* FLORES Y COSAS BONITAS */
+
+.flower-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.flower-card {
+  min-width: 0;
+  padding: 14px 8px;
+  border-radius: 16px;
+  background: #e5ebc7;
+  text-align: center;
+  line-height: 1.4;
+  font-size: 1rem;
+  overflow-wrap: anywhere;
+}
+
+.flower-card img {
+  display: block;
+  width: clamp(65px, 12vw, 90px);
+  height: clamp(65px, 12vw, 90px);
+  max-width: 100%;
   object-fit: contain;
   object-position: center;
   margin: 0 auto;
 }
 
 .flower-card span {
+  display: block;
   font-size: clamp(11px, 2.2vw, 14px);
   line-height: 1.5;
 }
-  .flower-card b { display: block; margin-top: 4px; }
-  .timeline { border-left: 2px solid #d6b5cb; padding-left: 19px; margin: 18px 0 0 8px; }
-  .moment { font-size: 0.9rem; text-align: justify; line-height: 1.6; position: relative; margin: 0 0 20px; }
-  .moment::before { content: ""; position: absolute; width: 11px; height: 11px; border-radius: 50%; background: #d78db6; left: -25px; top: 5px; }
-  .moment b { display: block; margin-bottom: 5px; }
-  .final-note { text-align: center; padding: 15px 0; }
-  .heart { display: inline-block; font-size: 55px; }
-  .small-note { font-size: 12px; opacity: .7; }
-  @media (min-width: 700px) and (max-width: 899px) {
-    .page { padding: 22px 16px 40px; }
-    .grid { gap: 18px; padding: 20px; }
-    .tile { min-height: 230px; padding: 18px; }
-    .tile-icon img { width: 72px; height: 72px; }
-    .tile-title { font-size: clamp(17px, 2.5vw, 22px); }
-  }
-  @media (min-width: 900px) {
-    .grid { gap: 25px; padding: 28px; }
-    .tile { min-height: 280px; padding: 26px; }
-    .number { width: 54px; height: 54px; font-size: 25px; }
-  }
-  @media (max-width: 540px) {
-    .page { padding: 14px 11px 30px; }
-    .browser { margin: 4px auto 24px; padding: 9px 11px; gap: 8px; border-radius: 17px; }
-    .hero { padding: 23px 12px 25px; border-radius: 22px; }
-    .grid { padding: 12px; gap: 12px; border-radius: 22px; }
-    .tile { min-height: 180px; padding: 13px; border-radius: 20px; }
-    .tile-icon {
-      min-height: 58px;
-      font-size: clamp(35px, 10vw, 53px);
-    }
-    .tile-icon img {
-              height: 150px;
-        margin: -25px 0 0 -5px;
-    }
-    .tile-title {
-      font-size: 13px;
-      padding-right: 22px;
-      margin-top: 12px;
-    }
-    .sub {
-    font-size: 12px;
-    }
 
-  
-    .number { width: 34px; height: 34px; right: 8px; bottom: 8px; font-size: 16px; }
-    .bookmark { top: 10px; right: 11px; font-size: 15px; }
-    .modal-card { padding: 24px 20px; border-radius: 22px; }
+.flower-card b {
+  display: block;
+  margin-top: 4px;
+}
+
+/* LÍNEA DEL TIEMPO */
+
+.timeline {
+  border-left: 2px solid #d6b5cb;
+  padding-left: 19px;
+  margin: 18px 0 0 8px;
+}
+
+.moment {
+  font-size: .9rem;
+  text-align: justify;
+  line-height: 1.6;
+  position: relative;
+  margin: 0 0 20px;
+}
+
+.moment::before {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #d78db6;
+  left: -25px;
+  top: 5px;
+}
+
+.moment b {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.final-note {
+  text-align: center;
+  padding: 15px 0;
+}
+
+.heart {
+  display: inline-block;
+  font-size: 55px;
+}
+
+.small-note {
+  font-size: 12px;
+  opacity: .7;
+}
+
+/* TABLETS: MÁS ESPACIO Y ELEMENTOS GRANDES */
+
+@media (min-width: 541px) and (max-width: 1024px) {
+  .page {
+    padding: 24px 20px 40px;
   }
-  @media (max-width: 350px) { .grid { grid-template-columns: 1fr; } .tile { min-height: 175px; } }
-  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
+
+  .browser {
+    margin-bottom: 32px;
+  }
+
+  .hero {
+    padding: 30px 22px 32px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    padding: 22px;
+  }
+
+  .tile {
+    min-height: 280px;
+    padding: 22px;
+    border-radius: 24px;
+  }
+
+  .tile-icon {
+    min-height: 145px;
+  }
+
+  .tile-icon img {
+    width: clamp(125px, 17vw, 165px);
+    height: clamp(125px, 17vw, 165px);
+  }
+
+  .tile-title {
+    font-size: clamp(19px, 2.5vw, 25px);
+    line-height: 1.35;
+    margin-top: 18px;
+  }
+
+  .sub {
+    font-size: clamp(15px, 2vw, 19px);
+  }
+
+  .number {
+    width: 46px;
+    height: 46px;
+    font-size: 22px;
+  }
+
+  .modal-card {
+    width: min(650px, 100%);
+    padding: 32px;
+  }
+
+  .flower-card {
+    padding: 18px 12px;
+  }
+
+  .flower-card img {
+    width: clamp(75px, 10vw, 105px);
+    height: clamp(75px, 10vw, 105px);
+  }
+
+  .flower-card b {
+    font-size: 15px;
+  }
+
+  .flower-card span {
+    font-size: 13px;
+  }
+}
+
+/* ESCRITORIO GRANDE */
+
+@media (min-width: 1025px) {
+  .grid {
+    gap: 25px;
+    padding: 28px;
+  }
+
+  .tile {
+    min-height: 290px;
+    padding: 26px;
+  }
+
+  .tile-icon {
+    min-height: 145px;
+  }
+
+  .tile-icon img {
+    width: 145px;
+    height: 145px;
+  }
+
+  .number {
+    width: 54px;
+    height: 54px;
+    font-size: 25px;
+  }
+}
+
+/* CELULARES */
+
+@media (max-width: 540px) {
+  .page {
+    width: 100%;
+    padding: 12px 8px 28px;
+  }
+
+  .browser {
+    width: 100%;
+    margin: 4px auto 22px;
+    padding: 9px;
+    gap: 7px;
+    border-radius: 16px;
+  }
+
+  .browser .circle {
+    font-size: 13px;
+  }
+
+  .browser .address {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .hero {
+    padding: 22px 12px 25px;
+    border-radius: 22px;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+  }
+
+  h1 {
+    font-size: clamp(34px, 9vw, 52px);
+  }
+
+  .hero p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .pill {
+    max-width: 100%;
+    padding: 12px 16px;
+  }
+
+  /* Dos tarjetas en todas las anchuras de celular */
+
+  .grid {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  .tile {
+    width: 100%;
+    min-width: 0;
+    min-height: 205px;
+    padding: 11px 9px;
+    border-radius: 17px;
+  }
+
+  .tile-icon {
+    min-height: 105px;
+    font-size: clamp(36px, 10vw, 48px);
+  }
+
+  .tile-icon img {
+    width: clamp(75px, 20vw, 110px);
+    height: clamp(75px, 20vw, 110px);
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .tile-title {
+    font-size: clamp(12px, 3.5vw, 17px);
+    line-height: 1.35;
+    margin-top: 10px;
+    padding-right: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .tile-title em {
+    font-size: clamp(10px, 2.8vw, 13px);
+    margin-bottom: 5px;
+  }
+
+  .number {
+    width: 29px;
+    height: 29px;
+    right: 6px;
+    bottom: 6px;
+    font-size: 14px;
+  }
+
+  .bookmark {
+    top: 8px;
+    right: 8px;
+    font-size: 13px;
+  }
+
+  .hint {
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 0 8px;
+  }
+
+  .footer {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  /* Ventanas emergentes en celular */
+
+  .modal {
+    padding: 10px;
+  }
+
+  .modal-card {
+    width: 100%;
+    max-height: 90vh;
+    max-height: 90dvh;
+    padding: 24px 16px;
+    border-radius: 20px;
+  }
+
+  .modal h2 {
+    font-size: 1.25rem;
+  }
+
+  .modal p {
+    font-size: .86rem;
+  }
+
+  .letter-paper {
+    padding: 15px 12px;
+  }
+
+  .bubble {
+    padding: 12px;
+    overflow-wrap: anywhere;
+  }
+
+  .flower-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .flower-card {
+    min-width: 0;
+    padding: 12px 6px;
+    overflow-wrap: anywhere;
+  }
+
+  .flower-card img {
+    width: clamp(55px, 16vw, 80px);
+    height: clamp(55px, 16vw, 80px);
+  }
+
+  .flower-card b {
+    font-size: 13px;
+  }
+
+  .flower-card span {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .timeline {
+    padding-left: 16px;
+    margin-left: 7px;
+  }
+
+  .moment {
+    font-size: .84rem;
+  }
+}
+
+/* CELULARES MUY ESTRECHOS: NO CAMBIAR A UNA COLUMNA */
+
+@media (max-width: 350px) {
+  .page {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  .browser {
+    gap: 5px;
+    padding: 8px 6px;
+  }
+
+  .browser .circle {
+    font-size: 11px;
+  }
+
+  .browser .address {
+    padding: 7px 5px;
+    font-size: 10px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+    padding: 7px;
+  }
+
+  .tile {
+    min-height: 185px;
+    padding: 9px 7px;
+    border-radius: 15px;
+  }
+
+  .tile-icon {
+    min-height: 85px;
+  }
+
+  .tile-icon img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .tile-title {
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  .tile-title em {
+    font-size: 10px;
+  }
+
+  .number {
+    width: 25px;
+    height: 25px;
+    right: 5px;
+    bottom: 5px;
+    font-size: 12px;
+  }
+
+  .bookmark {
+    right: 6px;
+    top: 6px;
+  }
+
+  .modal-card {
+    padding: 22px 12px;
+  }
+}
+
+/* RESPETAR PREFERENCIAS DE ANIMACIÓN */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 </style>
 </head>
+
 <body>
 <main class="page">
+
   <div class="browser" aria-label="Barra decorativa del navegador">
-    <span class="circle"><i class="fa-solid fa-chevron-left"></i></span><span class="circle"><i class="fa-solid fa-angle-right"></i></span><span class="circle"><i class="fa-solid fa-house"></i></span>
-    <div class="address">500-days.with.you ♡</div><span class="circle"><i class="fa-solid fa-arrow-rotate-right"></i></span><span class="circle"><i class="fa-solid fa-plus"></i></span>
+    <span class="circle"><i class="fa-solid fa-chevron-left"></i></span>
+    <span class="circle"><i class="fa-solid fa-angle-right"></i></span>
+    <span class="circle"><i class="fa-solid fa-house"></i></span>
+    <div class="address">500-days.with.you ♡</div>
+    <span class="circle"><i class="fa-solid fa-arrow-rotate-right"></i></span>
+    <span class="circle"><i class="fa-solid fa-plus"></i></span>
   </div>
 
   <header class="hero">
@@ -244,122 +943,253 @@
 
   <section class="surprises" id="surprises" hidden>
     <p class="hint">Toca cada tarjeta para descubrir su contenido</p>
-  <section class="grid" id="garden" aria-label="Sorpresas interactivas">
-    <button class="tile envelope" data-modal="letter">
-      <span class="bookmark"></span><span class="tile-icon"><img src="img/dear you.png"></span>
-      <span class="tile-title"><em class="sub">Una pequeña</em>Cartita para ti</span><span class="number">1</span>
-    </button>
-    <button class="tile messages" data-modal="messages">
-      <span class="bookmark"></span><span id="msg" class="tile-icon"><img src="img/message.png"></span>
-      <span class="tile-title"><em class="sub">¡Correspondencia!</em>Mensajes para Leo</span><span class="number">2</span>
-    </button>
-    <button class="tile flower" data-modal="flowers">
-      <span class="bookmark"></span><span class="tile-icon"><img src="img/lirio.png"></span>
-      <span class="tile-title"><em class="sub">Te encuentro en...</em>Las cosas que amo</span><span class="number">3</span>
-    </button>
-    <button class="tile typewriter" data-modal="story">
-      <span class="bookmark"></span><span class="tile-icon"><img src="img/story.png"></span>
-      <span class="tile-title"><em class="sub">Mi capítulo favorito:</em>El día que te conocí</span><span class="number">4</span>
-    </button>
-    <button class="tile memories" data-modal="memories">
-      <span class="bookmark"></span><span class="tile-icon"><img src="img/memories.png"></span>
-      <span class="tile-title"><em class="sub">Guardo nuestros recuerdos</em>En una cajita con llave</span><span class="number">5</span>
-    </button>
-    <button class="tile final" data-modal="final">
-      <span class="bookmark"></span><span class="tile-icon"><img src="img/correspondencia.png"></span>
-      <span class="tile-title"><em class="sub">Último y —</em>¡Más importante!</span><span class="number">6</span>
-    </button>
-  </section>
 
-  <footer class="footer">Hecho con mucho amor,<br>para mi persona número uno en el mundo !!! ♡</footer>
+    <section class="grid" id="garden" aria-label="Sorpresas interactivas">
+
+      <button class="tile envelope" data-modal="letter">
+        <span class="bookmark"></span>
+        <span class="tile-icon"><img src="img/dear you.png" alt=""></span>
+        <span class="tile-title"><em class="sub">Una pequeña</em>Cartita para ti</span>
+        <span class="number">1</span>
+      </button>
+
+      <button class="tile messages" data-modal="messages">
+        <span class="bookmark"></span>
+        <span id="msg" class="tile-icon"><img src="img/message.png" alt=""></span>
+        <span class="tile-title"><em class="sub">¡Correspondencia!</em>Mensajes para Leo</span>
+        <span class="number">2</span>
+      </button>
+
+      <button class="tile flower" data-modal="flowers">
+        <span class="bookmark"></span>
+        <span class="tile-icon"><img src="img/lirio.png" alt=""></span>
+        <span class="tile-title"><em class="sub">Te encuentro en...</em>Las cosas que amo</span>
+        <span class="number">3</span>
+      </button>
+
+      <button class="tile typewriter" data-modal="story">
+        <span class="bookmark"></span>
+        <span class="tile-icon"><img src="img/story.png" alt=""></span>
+        <span class="tile-title"><em class="sub">Mi capítulo favorito:</em>El día que te conocí</span>
+        <span class="number">4</span>
+      </button>
+
+      <button class="tile memories" data-modal="memories">
+        <span class="bookmark"></span>
+        <span class="tile-icon"><img src="img/memories.png" alt=""></span>
+        <span class="tile-title"><em class="sub">Guardo nuestros recuerdos</em>En una cajita con llave</span>
+        <span class="number">5</span>
+      </button>
+
+      <button class="tile final" data-modal="final">
+        <span class="bookmark"></span>
+        <span class="tile-icon"><img src="img/correspondencia.png" alt=""></span>
+        <span class="tile-title"><em class="sub">Último y —</em>¡Más importante!</span>
+        <span class="number">6</span>
+      </button>
+
+    </section>
+
+    <footer class="footer">
+      Hecho con mucho amor,<br>
+      para mi persona número uno en el mundo !!! ♡
+    </footer>
   </section>
 </main>
 
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
   <div class="modal-card">
-    <button class="close" id="closeModal" aria-label="Cerrar"><i class="fa-regular fa-circle-xmark"></i></button>
+    <button class="close" id="closeModal" aria-label="Cerrar">
+      <i class="fa-regular fa-circle-xmark"></i>
+    </button>
     <h2 id="modalTitle">Para ti</h2>
     <div id="modalContent"></div>
   </div>
 </div>
 
 <script>
-  // PERSONALIZA los textos de este objeto para que la página hable de ustedes.
-  const content = {
-    letter: {
-      title: "Mi lindo amor",
-      html: `<div class="letter-paper"><p>Querido mío:</p><p>Hoy es un día muy importante, cumplimos 500 días. No puedo creer que el tiempo nos haya pasado tan rápido, sigo recordando el comienzo de todo como si hubiera sido el mes pasado. Estoy tan agradecido con la vida por haberte puesto en mi camino cuando más lo necesitaba, sin quererlo, me diste una idea distinta de lo que yo creía sobre el amor, y ahora no cabe tanto en mi pecho, que es necesario sacarlo, gritarle a todo el mundo lo enamorado que estoy.</p>
-        <p>El hecho de que sigas aquí, después de tanto tiempo, de tantos obstáculos que hemos atravesado, me llena el alma de calma. Nunca había eperimentado algo igual a lo que tenemos, y me encanta pensar que todo contigo es nuevo. Me enseñaste que amar no tiene que ser difícil, que si ambos lo queremos, podemos estar juntos durante todo el tiempo que la vida nos permita. Sé que quiero estar contigo, espero que tú también lo sepas. </p>
-        <p>Eres mi persona especial, todo lo que siempre imaginé, lo que soñaba con tener, en tus brazos lo tengo, gracias por sostenerme en cada momento difícil, por ser mi acompañante en mis logros, y sobre todo, por amarme cada día.</p><p>Felices 500 días, vida. Te amo muchísimo.</p><p>Con todo mi cariño,<br>Alec ♡</p></div>`
-    },
-    messages: {
-      icon: `<i class="fa-solid fa-heart"></i>`,
-      title: "Remitente: Alec",
-      html: `<p>Toca cada mensaje para descubrir su contenido.</p><div class="message-stack">
-        <button class="bubble">Cuando tengas un día difícil…<span>Espero que recuerdes que todos tus esfuerzos valen la pena, y hay una persona que lo ve, que siempre lo ha visto y que está muy orgullosa de ti, de todo lo que haces y a quien le importas.</span></button>
-        <button class="bubble">Si pudiera pedirte una cosa...<span>Que siempre pienses en mí con cariño, porque yo siempre lo haré de ti. Incluso si un día estamos lejos, seguiré pensando en ti como el dulce chico de lindos ojos de quien me enamoré.</span></button>
-        <button class="bubble">Mi lugar favorito…<span>El lugar entre tus brazos, recostando mi cabeza en tu pecho, sintiendo cómo la calidez me envuelve. Ese es mi hogar, el lugar al que pertenezco.</span></button>
-        <button class="bubble">Si volviera a empezar…<span>Lo haría todo igual. No cambiaría absolutamente nada, porque todas las cosas que pasamos, nos hicieron llegar a donde estamos hoy, cada experiencia se quedó inmortalizada en el tiempo como un dulce recuerdo y gran enseñanza para continuar avanzando tomados de la mano.</span></button>
+const content = {
+  letter: {
+    title: "Mi lindo amor",
+    html: `<div class="letter-paper">
+      <p>Querido mío:</p>
+      <p>Hoy es un día muy importante, cumplimos 500 días. No puedo creer que el tiempo nos haya pasado tan rápido, sigo recordando el comienzo de todo como si hubiera sido el mes pasado. Estoy tan agradecido con la vida por haberte puesto en mi camino cuando más lo necesitaba, sin quererlo, me diste una idea distinta de lo que yo creía sobre el amor, y ahora no cabe tanto en mi pecho, que es necesario sacarlo, gritarle a todo el mundo lo enamorado que estoy.</p>
+      <p>El hecho de que sigas aquí, después de tanto tiempo, de tantos obstáculos que hemos atravesado, me llena el alma de calma. Nunca había eperimentado algo igual a lo que tenemos, y me encanta pensar que todo contigo es nuevo. Me enseñaste que amar no tiene que ser difícil, que si ambos lo queremos, podemos estar juntos durante todo el tiempo que la vida nos permita. Sé que quiero estar contigo, espero que tú también lo sepas.</p>
+      <p>Eres mi persona especial, todo lo que siempre imaginé, lo que soñaba con tener, en tus brazos lo tengo, gracias por sostenerme en cada momento difícil, por ser mi acompañante en mis logros, y sobre todo, por amarme cada día.</p>
+      <p>Felices 500 días, vida. Te amo muchísimo.</p>
+      <p>Con todo mi cariño,<br>Alec ♡</p>
+    </div>`
+  },
+
+  messages: {
+    icon: `<i class="fa-solid fa-heart"></i>`,
+    title: "Remitente: Alec",
+    html: `<p>Toca cada mensaje para descubrir su contenido.</p>
+      <div class="message-stack">
+        <button class="bubble">Cuando tengas un día difícil…
+          <span>Espero que recuerdes que todos tus esfuerzos valen la pena, y hay una persona que lo ve, que siempre lo ha visto y que está muy orgullosa de ti, de todo lo que haces y a quien le importas.</span>
+        </button>
+
+        <button class="bubble">Si pudiera pedirte una cosa...
+          <span>Que siempre pienses en mí con cariño, porque yo siempre lo haré de ti. Incluso si un día estamos lejos, seguiré pensando en ti como el dulce chico de lindos ojos de quien me enamoré.</span>
+        </button>
+
+        <button class="bubble">Mi lugar favorito…
+          <span>El lugar entre tus brazos, recostando mi cabeza en tu pecho, sintiendo cómo la calidez me envuelve. Ese es mi hogar, el lugar al que pertenezco.</span>
+        </button>
+
+        <button class="bubble">Si volviera a empezar…
+          <span>Lo haría todo igual. No cambiaría absolutamente nada, porque todas las cosas que pasamos, nos hicieron llegar a donde estamos hoy, cada experiencia se quedó inmortalizada en el tiempo como un dulce recuerdo y gran enseñanza para continuar avanzando tomados de la mano.</span>
+        </button>
       </div>`
-    },
-    flowers: {
-      title: "Lo bello de la vida",
-      html: `<p>Cosas que me hacen pensar en ti</p><div class="flower-list">
-        <div class="flower-card"> <img src="img/flowers.png"> <b>La belleza natural</b><span>Te veo en las cosas hermosas que nos regala la naturaleza.</span></div>
-        <div class="flower-card"> <img src="img/tea.png"> <b>La calidez en invierno</b><span>La sensación de ser abrazado por el calor luego de pasar frío.</span></div>
-        <div class="flower-card"> <img src="img/book.png"> <b>Explorar mis hobbies</b><span>Quiero compartir lo que amo contigo, me emociona contarte lo que disfruto.</span></div>
-        <div class="flower-card"> <img src="img/cakie.png"> <b>Un postre dulcesito</b><span>Una pequeña recompensa que puedo obtener cuando estoy pasando por mucho.</span></div>`
-    },
-    story: {
-      title: "Nuestra historia",
-      html: `<p>Quinientos días hechos de muchísimas pequeñas historias.</p><div class="timeline">
-        <div class="moment"><b>Prólogo · Conocerte</b>Aquel día, me encontraba en una tristeza muy grande, en la que no podía ver atisbo de luz. Sin embargo, tú iluminaste por completo mi día, dejándome con ganas de conocer más de aquella persona tan brillante.</div>
-        <div class="moment"><b>Me gustas · Empezar a conocernos</b>Recuerdo perfectamente cuando nos declaramos, aunque no lo creas, horas antes aún estaba preguntándome si estabas coqueteando conmigo o sólo eras lindo. Mi corazón se llenó de alegría cuando recibí un <em>quiero decirte que me encantas</em></div>
-        <div class="moment"><b>14 de Junio · Oficialmente novios !!!</b>Esto lo intuí incluso antes de que pasara, y me daba tanta ternura que no podías esperar a contarme que me tenías un regalo, fue lo más hermoso que alguna vez hayan hecho por mí y lloré mucho porque me sentí tan amado.</div>
-        <div class="moment"><b>Nuestro primer beso · Ternura y cariño</b>Nuestro primer besito siendo novios es algo que guardo con tanto amor. Después de semanas esperando el momento en que pudiéramos cruzar esa línea, con toda la emoción del mundo, fue un momento maravilloso.</div>
-        <div class="moment"><b>Canciones especiales · Aún sin saber que eran para mí o para ti</b>Todas las canciones de amor me hacen pensar en ti, pero hay algunas que son tan especiales, porque fueron nuestras incluso antes de que alguno de los dos lo supiera.</div>
-        <div class="moment"><b>Epílogo · Nunca escrito</b>Nuestra historia se sigue escribiendo y seguirá así durante mucho tiempo. Tal como leer mi libro favorito, no quiero que esta historia tenga fin.</div>`
-    },
-    memories: {
-      title: "Pequeño tesoro en mi corazón",
-      html: `<p>Recuerdos que merecen un rinconcito especial</p>
-<div class="letter-paper"><p><b>Un momento que siempre me hace sonreír:</b><br>Pensar en aquella vez que te quitaron la muela y estabas muy tristito porque no podías comer tus chips, pero después dijiste que eras afortunado porque tenías muchas cosas y le agradecías a tus dientes por permitirte masticar tanta comida. Pienso en ese momento cuando estoy triste y te amo más cada vez que lo recuerdo.</p><p><b>Un momento significativo:</b><br>Cuando me dijiste «te amo» por primera vez. Leo, tu forma de amar me parece que está hecha a mi medida. Incluso te disculpaste por si sentía que era demasiado rápido decirlo y dijiste que no tenía que decirlo si no quería. En ese momento me di cuenta de la suerte que tenía de estar contigo.</p><p><b>Un momento íntimo:</b><br>Para mí, hemos tenido demasiados momentos íntimos, pero yo destacaría todas las veces que nos quedamos hasta tarde diciéndonos cuánto nos amamos. Me hacen irme a dormir con una sonrisa de tonto en la cara y, honestamente, me siento la persona más feliz del mundo.</p><p><b>Un momento gracioso:</b><br>Es difícil elegir un momento específico. Me haces reír mucho cuando te haces el indignado por cualquier cosa, con tus GIFs de perritos o gatitos chistosos, cuando te pones bravito con alguien y lo insultas o cuando haces una simple broma. Estaré muy enamorado o eres el ser más divertido del planeta. Creo que la segunda.</p></div>`
-    },
-    final: {
-      title: "Felices 500 días",
-      html: `<div class="final-note"><span class="heart">♡</span><p>Si llegaste hasta aquí (que obviamente lo hiciste) quiero dejarte un último mensaje :</p><p><b>Gracias por todo lo que me has brindado durante este largo tiempo.</b></p><p>La pequeña sorpresa termina aquí. Deseo que vengan muchos más días a tu lado, estoy ansioso por vivirlos todos y disfrutarlos como nadie.</p><p>Hoy, my todos los días, me alegra tenerte en mi vida. Que seas tú el hombrecito de mi vida, el dueño de mi corazón, quien me acompaña cada día y con quien me voy a dormir cada noche.</p><p><b>Felices 500 días, mi amor. Deseo que lleguemos a los 1000 ❤︎</b></p></div>`
-    }
-  };
+  },
 
-  const modal = document.getElementById("modal");
-  const modalTitle = document.getElementById("modalTitle");
-  const modalIcon = document.getElementById("modalIcon");
-  const modalContent = document.getElementById("modalContent");
-  let lastFocus = null;
+  flowers: {
+    title: "Lo bello de la vida",
+    html: `<p>Cosas que me hacen pensar en ti</p>
+      <div class="flower-list">
+        <div class="flower-card">
+          <img src="img/flowers.png" alt="">
+          <b>La belleza natural</b>
+          <span>Te veo en las cosas hermosas que nos regala la naturaleza.</span>
+        </div>
 
-  function openModal(key) {
-    const item = content[key];
-    if (!item) return;
-    lastFocus = document.activeElement;
-    modalTitle.textContent = item.title;
-    modalContent.innerHTML = item.html;
-    modal.classList.add("open");
-    document.body.style.overflow = "hidden";
-    document.getElementById("closeModal").focus();
+        <div class="flower-card">
+          <img src="img/tea.png" alt="">
+          <b>La calidez en invierno</b>
+          <span>La sensación de ser abrazado por el calor luego de pasar frío.</span>
+        </div>
+
+        <div class="flower-card">
+          <img src="img/book.png" alt="">
+          <b>Explorar mis hobbies</b>
+          <span>Quiero compartir lo que amo contigo, me emociona contarte lo que disfruto.</span>
+        </div>
+
+        <div class="flower-card">
+          <img src="img/cakie.png" alt="">
+          <b>Un postre dulcesito</b>
+          <span>Una pequeña recompensa que puedo obtener cuando estoy pasando por mucho.</span>
+        </div>
+      </div>`
+  },
+
+  story: {
+    title: "Nuestra historia",
+    html: `<p>Quinientos días hechos de muchísimas pequeñas historias.</p>
+      <div class="timeline">
+        <div class="moment">
+          <b>Prólogo · Conocerte</b>
+          Aquel día, me encontraba en una tristeza muy grande, en la que no podía ver atisbo de luz. Sin embargo, tú iluminaste por completo mi día, dejándome con ganas de conocer más de aquella persona tan brillante.
+        </div>
+
+        <div class="moment">
+          <b>Me gustas · Empezar a conocernos</b>
+          Recuerdo perfectamente cuando nos declaramos, aunque no lo creas, horas antes aún estaba preguntándome si estabas coqueteando conmigo o sólo eras lindo. Mi corazón se llenó de alegría cuando recibí un <em>quiero decirte que me encantas</em>
+        </div>
+
+        <div class="moment">
+          <b>14 de Junio · Oficialmente novios !!!</b>
+          Esto lo intuí incluso antes de que pasara, y me daba tanta ternura que no podías esperar a contarme que me tenías un regalo, fue lo más hermoso que alguna vez hayan hecho por mí y lloré mucho porque me sentí tan amado.
+        </div>
+
+        <div class="moment">
+          <b>Nuestro primer beso · Ternura y cariño</b>
+          Nuestro primer besito siendo novios es algo que guardo con tanto amor. Después de semanas esperando el momento en que pudiéramos cruzar esa línea, con toda la emoción del mundo, fue un momento maravilloso.
+        </div>
+
+        <div class="moment">
+          <b>Canciones especiales · Aún sin saber que eran para mí o para ti</b>
+          Todas las canciones de amor me hacen pensar en ti, pero hay algunas que son tan especiales, porque fueron nuestras incluso antes de que alguno de los dos lo supiera.
+        </div>
+
+        <div class="moment">
+          <b>Epílogo · Nunca escrito</b>
+          Nuestra historia se sigue escribiendo y seguirá así durante mucho tiempo. Tal como leer mi libro favorito, no quiero que esta historia tenga fin.
+        </div>
+      </div>`
+  },
+
+  memories: {
+    title: "Pequeño tesoro en mi corazón",
+    html: `<p>Recuerdos que merecen un rinconcito especial</p>
+      <div class="letter-paper">
+        <p><b>Un momento que siempre me hace sonreír:</b><br>
+        Pensar en aquella vez que te quitaron la muela y estabas muy tristito porque no podías comer tus chips, pero después dijiste que eras afortunado porque tenías muchas cosas y le agradecías a tus dientes por permitirte masticar tanta comida. Pienso en ese momento cuando estoy triste y te amo más cada vez que lo recuerdo.</p>
+
+        <p><b>Un momento significativo:</b><br>
+        Cuando me dijiste «te amo» por primera vez. Leo, tu forma de amar me parece que está hecha a mi medida. Incluso te disculpaste por si sentía que era demasiado rápido decirlo y dijiste que no tenía que decirlo si no quería. En ese momento me di cuenta de la suerte que tenía de estar contigo.</p>
+
+        <p><b>Un momento íntimo:</b><br>
+        Para mí, hemos tenido demasiados momentos íntimos, pero yo destacaría todas las veces que nos quedamos hasta tarde diciéndonos cuánto nos amamos. Me hacen irme a dormir con una sonrisa de tonto en la cara y, honestamente, me siento la persona más feliz del mundo.</p>
+
+        <p><b>Un momento gracioso:</b><br>
+        Es difícil elegir un momento específico. Me haces reír mucho cuando te haces el indignado por cualquier cosa, con tus GIFs de perritos o gatitos chistosos, cuando te pones bravito con alguien y lo insultas o cuando haces una simple broma. Estaré muy enamorado o eres el ser más divertido del planeta. Creo que la segunda.</p>
+      </div>`
+  },
+
+  final: {
+    title: "Felices 500 días",
+    html: `<div class="final-note">
+      <span class="heart">♡</span>
+      <p>Si llegaste hasta aquí (que obviamente lo hiciste) quiero dejarte un último mensaje :</p>
+      <p><b>Gracias por todo lo que me has brindado durante este largo tiempo.</b></p>
+      <p>La pequeña sorpresa termina aquí. Deseo que vengan muchos más días a tu lado, estoy ansioso por vivirlos todos y disfrutarlos como nadie.</p>
+      <p>Hoy, my todos los días, me alegra tenerte en mi vida. Que seas tú el hombrecito de mi vida, el dueño de mi corazón, quien me acompaña cada día y con quien me voy a dormir cada noche.</p>
+      <p><b>Felices 500 días, mi amor. Deseo que lleguemos a los 1000 ❤︎</b></p>
+    </div>`
   }
-  function closeModal() {
-    modal.classList.remove("open");
-    document.body.style.overflow = "";
-    if (lastFocus) lastFocus.focus();
+};
+
+const modal = document.getElementById("modal");
+const modalTitle = document.getElementById("modalTitle");
+const modalContent = document.getElementById("modalContent");
+
+let lastFocus = null;
+
+function openModal(key) {
+  const item = content[key];
+  if (!item) return;
+
+  lastFocus = document.activeElement;
+  modalTitle.textContent = item.title;
+  modalContent.innerHTML = item.html;
+
+  modal.classList.add("open");
+  document.body.style.overflow = "hidden";
+  document.getElementById("closeModal").focus();
+}
+
+function closeModal() {
+  modal.classList.remove("open");
+  document.body.style.overflow = "";
+
+  if (lastFocus) {
+    lastFocus.focus();
   }
-  document.querySelectorAll("[data-modal]").forEach(button => {
-    button.addEventListener("click", () => openModal(button.dataset.modal));
+}
+
+document.querySelectorAll("[data-modal]").forEach(button => {
+  button.addEventListener("click", () => {
+    openModal(button.dataset.modal);
   });
-  document.getElementById("closeModal").addEventListener("click", closeModal);
-  modal.addEventListener("click", event => { if (event.target === modal) closeModal(); });
-  document.addEventListener("keydown", event => { if (event.key === "Escape") closeModal(); });
+});
 
-  document.getElementById("startButton").addEventListener("click", () => {
+document.getElementById("closeModal").addEventListener("click", closeModal);
+
+modal.addEventListener("click", event => {
+  if (event.target === modal) {
+    closeModal();
+  }
+});
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape" && modal.classList.contains("open")) {
+    closeModal();
+  }
+});
+
+document.getElementById("startButton").addEventListener("click", () => {
   const surprises = document.getElementById("surprises");
 
   if (surprises.hidden) {
@@ -379,12 +1209,16 @@
       });
     }, 100);
   }
-  });
+});
 
-  modalContent.addEventListener("click", event => {
-    const bubble = event.target.closest(".bubble");
-    if (bubble) bubble.classList.toggle("revealed");
-  });
+modalContent.addEventListener("click", event => {
+  const bubble = event.target.closest(".bubble");
+
+  if (bubble) {
+    bubble.classList.toggle("revealed");
+  }
+});
 </script>
+
 </body>
 </html>
